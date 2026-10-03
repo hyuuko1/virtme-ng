@@ -739,7 +739,7 @@ run_user_shell() {
     local consdev=$1 uid=$2
     local args=()
 
-    print_logo
+    # print_logo
 
     [[ -n ${virtme_shell:-} ]] && args+=(-s "$virtme_shell")
     [[ -n ${virtme_user:-} ]] && args+=(-- "$virtme_user")

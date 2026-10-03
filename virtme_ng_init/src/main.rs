@@ -1219,7 +1219,7 @@ fn run_user_shell(tty_fd: libc::c_int) {
         args.extend(["--", &user]);
     }
 
-    print_logo();
+    // print_logo();
     run_shell(tty_fd, "su", &args);
 }
 
@@ -1362,6 +1362,7 @@ fn run_misc_services() -> thread::JoinHandle<()> {
     })
 }
 
+/*
 fn print_logo() {
     let logo = r"
           _      _
@@ -1374,6 +1375,7 @@ fn print_logo() {
     println!("   kernel version: {}", get_kernel_version(true));
     println!("   (CTRL+d to exit)\n");
 }
+*/
 
 fn main() {
     // Basic system initialization (order is important here).
