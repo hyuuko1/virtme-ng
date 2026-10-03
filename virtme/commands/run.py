@@ -1544,6 +1544,7 @@ def ssh_server(args, arch, qemuargs, kernelargs, guest_cache_dir):
     # Disable all kinds of host identity checks, since these addresses are generally ephemeral.
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
+    LogLevel ERROR
 
 Host {VIRTME_SSH_DESTINATION_NAME}
     HostName localhost
