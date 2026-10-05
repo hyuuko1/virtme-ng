@@ -318,6 +318,7 @@ fn run_systemd_tmpfiles() {
         "--create",
         "--boot",
         "--exclude-prefix=/dev",
+        "--exclude-prefix=/etc",
         "--exclude-prefix=/root",
     ];
     utils::run_cmd("systemd-tmpfiles", args);

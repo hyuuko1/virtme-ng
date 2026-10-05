@@ -274,7 +274,7 @@ run_systemd_tmpfiles() {
     # Does the system use systemd-tmpfiles?
     if command -v systemd-tmpfiles &> /dev/null; then
         log "running systemd-tmpfiles"
-        systemd-tmpfiles --create --boot --exclude-prefix="/dev" --exclude-prefix="/root"
+        systemd-tmpfiles --create --boot --exclude-prefix="/dev" --exclude-prefix="/etc" --exclude-prefix="/root"
     fi
 }
 
