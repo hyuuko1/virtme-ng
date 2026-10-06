@@ -85,12 +85,12 @@ vng / virtme-ng (`virtme_ng/run.py`)  <─── vng-mcp (`virtme_ng/mcp.py`)
 
 ### Issue tracker
 
-本地工单：需求与任务存储于 `.scratch/<feature-slug>/` 目录。执行规格撰写、工单分解或任务申领时查阅 `docs/agents/issue-tracker.md`。
+本地 Markdown 工单（保存在 `.scratch/<feature>/` 目录下）。参见 `docs/agents/issue-tracker.md`。
 
 ### Triage labels
 
-分流标签：采用五类标准分流角色（`needs-triage`、`needs-info`、`ready-for-agent`、`ready-for-human`、`wontfix`）。执行 issue 分流或状态标记时查阅 `docs/agents/triage-labels.md`。
+使用 5 个标准 Triage 角色标签（`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`）。参见 `docs/agents/triage-labels.md`。
 
 ### Domain docs
 
-领域架构：单上下文布局（根目录 `CONTEXT.md` 与架构决策记录 `docs/adr/`）。架构设计或领域术语对齐时查阅 `docs/agents/domain.md`。
+单上下文架构（根目录 `GLOSSARY.md` 与 `docs/adr/`）。参见 `docs/agents/domain.md`。
