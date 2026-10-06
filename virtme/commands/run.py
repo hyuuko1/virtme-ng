@@ -2375,8 +2375,13 @@ def do_it() -> int:
         )
     else:
         # 和 do_script() 里同样加上这两个，确保 panic 后内核不等待而且 qemu 立即退出。
+        # https://127.0.0.1:10240/c/246a1eb8-b53a-4111-bbcf-b0771308c917
         qemuargs.extend(["-no-reboot"])
         kernelargs.append("panic=-1")
+
+    # 解决 panic 紧急重启时 IBT 导致的问题
+    # https://127.0.0.1:10240/c/90478154-2ccd-46a3-808a-75c67dfdb8a8
+    kernelargs.append("reboot=t")
 
     if args.script_exec is not None:
         _, ret_path = tempfile.mkstemp(prefix="virtme_ret")
