@@ -2373,6 +2373,10 @@ def do_it() -> int:
         do_script(
             args.script_sh, ret_path=ret_path, show_boot_console=args.show_boot_console
         )
+    else:
+        # 和 do_script() 里同样加上这两个，确保 panic 后内核不等待而且 qemu 立即退出。
+        qemuargs.extend(["-no-reboot"])
+        kernelargs.append("panic=-1")
 
     if args.script_exec is not None:
         _, ret_path = tempfile.mkstemp(prefix="virtme_ret")
